@@ -33,7 +33,7 @@ int main(int argc, char** argv)
 		char B = *(pixel + 2);
 		if (channels == 4)
 		{
-			char A = (*pixel + 3);
+			char A = *(pixel + 3);
 		}
 
 		int average = (R + G + B) / 3;
@@ -47,8 +47,6 @@ int main(int argc, char** argv)
 		}
 	}
 
-	free(image);
-	free(shades);
 	stbi_image_free(image);
 	return 0;
 }
